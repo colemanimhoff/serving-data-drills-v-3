@@ -6,7 +6,7 @@ const port = parseInt(process.env.PORT || 3000)
 const students = require('./students.js')
 
 function getDataById(data, id) {
-    return data.filter(currentItem => currentItem.id == id)
+    return data.data.filter(currentItem => currentItem.id == id)
 }
 
 app.get('/', (request, response) => response.json(students))
